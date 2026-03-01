@@ -71,6 +71,7 @@
           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-cog"></i> <span>Skills</span></a></li>
           <li><a href="#background" class="nav-link scrollto"><i class="bx bx-building"></i> <span>Background</span></a></li>
           <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+          <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-book-reader"></i> <span>Publications</span></a></li>
           <!-- <li><a href="#blogs" class="nav-link scrollto"><i class="bx bx-message-detail"></i> <span>Blogs</span></a></li> -->
           <li><a href="#awards" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Awards</span></a></li>
           <li><a href="#hobbies" class="nav-link scrollto"><i class="bx bx-ball"></i> <span>Hobbies</span></a></li>
@@ -262,7 +263,8 @@ medication packaging using computer vision techniques. Previously, I was a gradu
               <ul>
                 <li>Fine-tuned Llama-3.2-1B-Instruct model using QLoRA and extracted medication name and dosage attributes from
 raw OCR text with 96% accuracy.</li>
-                
+                <li>Engineered an automated NDC extraction pipeline by integrating a fine-tuned YOLOv5 detector with PyZbar,
+achieving 87% decoding accuracy across diverse label orientations.</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -309,49 +311,130 @@ raw OCR text with 96% accuracy.</li>
       <h2>Project Portfolio</h2>
     </div>
 
-    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
+     <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
         <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <img class="card-img-top img-fluid" src="assets/img/ARIAC2025.png" alt="ARIAC - Warehouse Automation" style="height: 230px; object-fit: cover;">
+          <video id="carlaVideo" class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
+            <source src="assets/img/carla3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <script>
+            (function() {
+              const v = document.getElementById('carlaVideo');
+              if (!v) return;
+
+              // Use 'canplay' to ensure the video is ready to be jumped to a specific time
+              v.addEventListener('canplay', function() {
+                if (v.currentTime < 10) {
+                  v.currentTime = 10;
+                  v.play().catch(error => {
+                    console.log("Autoplay was prevented, user interaction might be needed.");
+                  });
+                }
+              }, { once: true }); // 'once: true' ensures this only runs the first time it loads
+            })();
+      </script>
           <div class="card-body">
-            <h5 class="card-title">ARIAC — Warehouse Automation (AGVs)</h5>
-            <p class="card-text">Developed warehouse automation solutions for ARIAC using ROS2: multi-threaded ROS2 packages, services/actions, and camera configuration; achieved 98% kitting precision and reduced task latency by ~35%.</p>
+            <h5 class="card-title">Frenet Optimal Trajectory Planner for ADAS</h5>
+            <p class="card-text">Developed a Frenet-based optimal trajectory and behavioral planner in CARLA using quintic polynomials; implemented dynamic cost-function tuning and feasibility checks for curvature, acceleration, and jerk to achieve 100% collision-free navigation and smooth lane-change maneuvers.</p>
           </div>
           <div class="portfolio-links">
-            <a href="https://github.com/manasdesai" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://github.com/manasdesai/ENPM818Z-RWA2.git" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
       </div>
 
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
+      <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
+        <video id="ariacVideo" class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
+          <source src="assets/img/ariac_video_compressed.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <script>
+            (function() {
+              const v = document.getElementById('ariacVideo');
+              if (!v) return;
+
+              // Use 'canplay' to ensure the video is ready to be jumped to a specific time
+              v.addEventListener('canplay', function() {
+                if (v.currentTime < 45) {
+                  v.currentTime = 45;
+                  v.play().catch(error => {
+                    console.log("Autoplay was prevented, user interaction might be needed.");
+                  });
+                }
+              }, { once: true }); // 'once: true' ensures this only runs the first time it loads
+            })();
+      </script>
+        <div class="card-body">
+          <h5 class="card-title">ARIAC — Warehouse Automation (AGVs)</h5>
+          <p class="card-text">Developed warehouse automation solutions for ARIAC using ROS2: multi-threaded ROS2 packages, services/actions, and camera configuration; achieved 98% kitting precision and reduced task latency by ~35%.</p>
+        </div>
+        <div class="portfolio-links">
+          <a href="https://github.com/manasdesai/ENPM663_Assignment2.git" title="More Details"><i class="bx bx-link"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
+        <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
+          <video class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
+            <source src="assets/img/perception_final_project_speed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">VisionNav: Autonomous Navigation System</h5>
+            <p class="card-text">Engineered a ROS 2 computer vision and navigation pipeline for TurtleBot4, achieving 95% ArUco-based pose accuracy and 98% YOLOv11 sign detection precision; integrated EKF-based sensor fusion with LIO-SAM and optical flow to ensure robust, real-time collision avoidance.</p>
+          </div>
+          <div class="portfolio-links">
+            <a href="https://github.com/manasdesai/Perception_Final_Project.git" title="More Details"><i class="bx bx-link"></i></a>
+          </div>
+        </div>
+    </div>
+
       <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
         <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <img class="card-img-top img-fluid" src="assets/img/coffee_making_simulation.jpeg" alt="Autonomous Coffee Robot" style="height: 230px; object-fit: cover;">
+          <video class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
+            <source src="assets/img/Coffee_Making_Robot.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
           <div class="card-body">
             <h5 class="card-title">Autonomous Coffee Making Robot</h5>
             <p class="card-text">UR10e manipulator in Gazebo: derived forward/inverse kinematics, integrated contour-based cup detection, and ROS2 pub/sub nodes; optimized coffee-making sequences to reduce preparation time by ~20%.</p>
           </div>
           <div class="portfolio-links">
-            <a href="https://github.com/manasdesai" title="More Details"><i class="bx bx-link"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
-        <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <img class="card-img-top img-fluid" src="assets/img/MonocularNeuralStrainFields.png" alt="Monocular 3D Reconstruction" style="height: 230px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title">Monocular 3D Reconstruction</h5>
-            <p class="card-text">Fine-tuned large multi-view Gaussian and neural scene models for monocular 3D reconstruction, regressing to TSDF values and improving reconstruction accuracy vs. baseline NeRF models.</p>
-          </div>
-          <div class="portfolio-links">
-            <a href="https://github.com/manasdesai" title="More Details"><i class="bx bx-link"></i></a>
+            <a href="https://github.com/GraysonGilbert/barista_robot" title="More Details"><i class="bx bx-link"></i></a>
           </div>
         </div>
       </div>
 
   </div>
 </section><!-- End Portfolio Section -->
+
+<section id="publications">
+    <div class="container">
+        <h2>Publications</h2>
+        
+        <div class="publication-card">
+            <div class="pub-image">
+                <img src="assets/img/MonocularNeuralStrainFields.png" alt="Monocular Reconstruction of Neural Tactile Fields">
+            </div>
+            <div class="pub-content">
+                <h3 class="pub-title">Monocular Reconstruction of Neural Tactile Fields</h3>
+                <p class="pub-authors">
+                    Pavan Mantripragada, Siddhanth Deshmukh, Eadom Dessalene, Manas Desai, Yiannis Aloimonos
+                </p>
+                <p class="pub-venue">arXiv Preprint, 2026</p>
+                <div class="pub-links">
+                    <a href="https://arxiv.org/abs/2602.12508" target="_blank" class="btn-link">
+                        <i class="fas fa-file-pdf"></i> arXiv:2602.12508
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- ======= Blogs Section ======= -->
 <!-- <section id="blogs" class="portfolio section-bg">
@@ -698,6 +781,14 @@ raw OCR text with 96% accuracy.</li>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    (function(){
+      const vids = document.querySelectorAll('video');
+      vids.forEach(v => {
+        try { v.playbackRate = 3; } catch(e) {}
+      });
+    })();
+  </script>
 
 </body>
 
