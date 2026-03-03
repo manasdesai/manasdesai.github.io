@@ -313,26 +313,14 @@ achieving 87% decoding accuracy across diverse label orientations.</li>
 
      <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
         <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <video id="carlaVideo" class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
-            <source src="assets/img/carla3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <script>
-            (function() {
-              const v = document.getElementById('carlaVideo');
-              if (!v) return;
-
-              // Use 'canplay' to ensure the video is ready to be jumped to a specific time
-              v.addEventListener('canplay', function() {
-                if (v.currentTime < 10) {
-                  v.currentTime = 10;
-                  v.play().catch(error => {
-                    console.log("Autoplay was prevented, user interaction might be needed.");
-                  });
-                }
-              }, { once: true }); // 'once: true' ensures this only runs the first time it loads
-            })();
-      </script>
+          <div style="position:relative;height:230px;overflow:hidden;">
+            <iframe
+              src="https://www.youtube.com/embed/FjbO6btLwBQ?autoplay=1&mute=1&loop=1&playlist=FjbO6btLwBQ&controls=0&modestbranding=1"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="autoplay; fullscreen"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Frenet Optimal Trajectory Planner for ADAS</h5>
             <p class="card-text">Developed a Frenet-based optimal trajectory and behavioral planner in CARLA using quintic polynomials; implemented dynamic cost-function tuning and feasibility checks for curvature, acceleration, and jerk to achieve 100% collision-free navigation and smooth lane-change maneuvers.</p>
@@ -346,26 +334,14 @@ achieving 87% decoding accuracy across diverse label orientations.</li>
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
     <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
       <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-        <video id="ariacVideo" class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
-          <source src="assets/img/ariac_video_compressed.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <script>
-            (function() {
-              const v = document.getElementById('ariacVideo');
-              if (!v) return;
-
-              // Use 'canplay' to ensure the video is ready to be jumped to a specific time
-              v.addEventListener('canplay', function() {
-                if (v.currentTime < 45) {
-                  v.currentTime = 45;
-                  v.play().catch(error => {
-                    console.log("Autoplay was prevented, user interaction might be needed.");
-                  });
-                }
-              }, { once: true }); // 'once: true' ensures this only runs the first time it loads
-            })();
-      </script>
+        <div style="position:relative;height:230px;overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/Vn7Ue8FoKV4?autoplay=1&mute=1&loop=1&playlist=Vn7Ue8FoKV4&controls=0&modestbranding=1"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+          </iframe>
+        </div>
         <div class="card-body">
           <h5 class="card-title">ARIAC — Warehouse Automation (AGVs)</h5>
           <p class="card-text">Developed warehouse automation solutions for ARIAC using ROS2: multi-threaded ROS2 packages, services/actions, and camera configuration; achieved 98% kitting precision and reduced task latency by ~35%.</p>
@@ -378,10 +354,14 @@ achieving 87% decoding accuracy across diverse label orientations.</li>
 
     <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
         <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <video class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
-            <source src="assets/img/perception_final_project_speed.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div style="position:relative;height:230px;overflow:hidden;">
+            <iframe
+              src="https://www.youtube.com/embed/5vH0p_5nx5g?autoplay=1&mute=1&loop=1&playlist=5vH0p_5nx5g&controls=0&modestbranding=1"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="autoplay; fullscreen"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="card-body">
             <h5 class="card-title">VisionNav: Autonomous Navigation System</h5>
             <p class="card-text">Engineered a ROS 2 computer vision and navigation pipeline for TurtleBot4, achieving 95% ArUco-based pose accuracy and 98% YOLOv11 sign detection precision; integrated EKF-based sensor fusion with LIO-SAM and optical flow to ensure robust, real-time collision avoidance.</p>
@@ -394,10 +374,14 @@ achieving 87% decoding accuracy across diverse label orientations.</li>
 
       <div class="col-lg-4 col-md-6 portfolio-item filter-aerial">
         <div class="card portfolio-wrap" style="height: 100%; display: flex; flex-direction: column;">
-          <video class="card-img-top img-fluid" style="height: 230px; object-fit: cover;" controls autoplay muted playsinline loop>
-            <source src="assets/img/Coffee_Making_Robot.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div style="position:relative;height:230px;overflow:hidden;">
+            <iframe
+              src="https://www.youtube.com/embed/0W3akXoPSgo?autoplay=1&mute=1&loop=1&playlist=0W3akXoPSgo&controls=0&modestbranding=1"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+              allow="autoplay; fullscreen"
+              allowfullscreen>
+            </iframe>
+          </div>
           <div class="card-body">
             <h5 class="card-title">Autonomous Coffee Making Robot</h5>
             <p class="card-text">UR10e manipulator in Gazebo: derived forward/inverse kinematics, integrated contour-based cup detection, and ROS2 pub/sub nodes; optimized coffee-making sequences to reduce preparation time by ~20%.</p>
